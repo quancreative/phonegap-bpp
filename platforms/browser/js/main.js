@@ -61,6 +61,25 @@ var main = {
                 'Heading: '           + p.coords.heading           + '\n<br />' +
                 'Speed: '             + p.coords.speed             + '\n<br />' +
                 'Timestamp: '         + p.timestamp                + '\n</div>');
+
+                var dataArr = {
+                    latitude: p.coords.longitude,
+                    longitude: p.coords.latitude,
+                    radius: 5,
+                };
+
+                var data = JSON.stringify(dataArr);
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://63.232.44.83:4567/match',
+                    data: data,
+                    success: function(d) {
+                        alert('Success, you have been found!');
+                    },
+                    dataType: ''
+                });
+
             }, function(error) {
                 $('.console-log').append('<div>code: '    + error.code    + '<br />' +
                     'message: ' + error.message + '</div>');
