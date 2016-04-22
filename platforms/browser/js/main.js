@@ -53,14 +53,14 @@ var main = {
             var position = navigator.geolocation.getCurrentPosition(function(p) {
             //$('.console-log').append('<div>it works</div>');
             //$('body').prepend('<div style="font-size: 5rem; color: red;">Latitude: ' + p.coords.latitude + '</div>\n');
-            $('.console-log').prepend('Latitude: '          + position.coords.latitude          + '\n' +
-                'Longitude: '         + position.coords.longitude         + '\n' +
-                'Altitude: '          + position.coords.altitude          + '\n' +
-                'Accuracy: '          + position.coords.accuracy          + '\n' +
-                'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-                'Heading: '           + position.coords.heading           + '\n' +
-                'Speed: '             + position.coords.speed             + '\n' +
-                'Timestamp: '         + position.timestamp                + '\n');
+            $('.console-log').prepend('<div style="color: red; font-size: 5rem">Latitude: '          + p.coords.latitude          + '\n' +
+                'Longitude: '         + p.coords.longitude         + '\n<br />' +
+                'Altitude: '          + p.coords.altitude          + '\n<br />' +
+                'Accuracy: '          + p.coords.accuracy          + '\n<br />' +
+                'Altitude Accuracy: ' + p.coords.altitudeAccuracy  + '\n<br />' +
+                'Heading: '           + p.coords.heading           + '\n<br />' +
+                'Speed: '             + p.coords.speed             + '\n<br />' +
+                'Timestamp: '         + p.timestamp                + '\n</div>');
             }, function(error) {
                 $('.console-log').append('<div>code: '    + error.code    + '<br />' +
                     'message: ' + error.message + '</div>');
