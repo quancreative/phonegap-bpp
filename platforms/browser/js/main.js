@@ -49,11 +49,14 @@ var main = {
 		};
 
 
-
-		var position = navigator.geolocation.getCurrentPosition(function(p) {
-		    alert('it works');
-            $('body').prepend('<div style="font-size: 5rem; color: red;">Latitude: ' + p.coords.latitude + '</div>\n');
-		});
+        if (navigator.geolocation) {
+            var position = navigator.geolocation.getCurrentPosition(function(p) {
+                alert('it works');
+                $('body').prepend('<div style="font-size: 5rem; color: red;">Latitude: ' + p.coords.latitude + '</div>\n');
+            });
+        } else {
+            alert("Your browser does not support Geolocation!");
+        }
 
 
 		// $('body').prepend('Latitude: '          + position.coords.latitude          + '\n' +
