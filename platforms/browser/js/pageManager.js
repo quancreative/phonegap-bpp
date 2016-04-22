@@ -21,14 +21,13 @@ var pageManager = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        $('nav a').click(function(event){
+        $('.nav a').click(function(event){
             event.preventDefault();
             var $this = $(this);
             var href = $this.attr('href');
 
             $('.page').removeClass('active');
             $(href).addClass('active');
-
         });
     }
 };
