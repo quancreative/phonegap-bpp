@@ -50,6 +50,11 @@
     app.initialize();
 
     $(document).ready(function() {
+        // Display JS errors.
+        window.onerror = function(message, url, lineNumber) {
+            alert(("Error: "+message+" in "+url+" at line "+lineNumber));
+        }
+
         var position = navigator.geolocation.getCurrentPosition(geolocationSuccess,
                 [geolocationError],
                 [geolocationOptions]);
