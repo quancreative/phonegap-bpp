@@ -82,32 +82,6 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-            
-    $(document).ready(function() {
-        // Display JS errors.
-        window.onerror = function(message, url, lineNumber) {
-            alert(("Error: "+message+" in "+url+" at line "+lineNumber));
-        }
-
-        var position = navigator.geolocation.getCurrentPosition(geolocationSuccess,
-                [geolocationError],
-                [geolocationOptions]);
-        alert('it works');
-
-        // $('body').prepend('Latitude: '          + position.coords.latitude          + '\n' +
-        //   'Longitude: '         + position.coords.longitude         + '\n' +
-        //   'Altitude: '          + position.coords.altitude          + '\n' +
-        //   'Accuracy: '          + position.coords.accuracy          + '\n' +
-        //   'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-        //   'Heading: '           + position.coords.heading           + '\n' +
-        //   'Speed: '             + position.coords.speed             + '\n' +
-        //   'Timestamp: '         + position.timestamp                + '\n');
-        // });
-        $('body').prepend('Latitude: ' + position.coords.latitude + '\n');
-
-    });
-</script>
+        <script type="text/javascript" src="/js/main.js"></script>
 </body>
 </html>
