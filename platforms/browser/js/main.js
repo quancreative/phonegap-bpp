@@ -48,11 +48,13 @@ var main = {
 		    alert(("Error: "+message+" in "+url+" at line "+lineNumber));
 		};
 
-
+        alert('no errors up until this point');
         if (navigator.geolocation) {
             var position = navigator.geolocation.getCurrentPosition(function(p) {
                 alert('it works');
                 $('body').prepend('<div style="font-size: 5rem; color: red;">Latitude: ' + p.coords.latitude + '</div>\n');
+            }, function() {
+                alert('error');
             });
         } else {
             alert("Your browser does not support Geolocation!");
