@@ -36,9 +36,10 @@
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
         <script type="text/javascript">
             app.initialize();
-            alert(navigator.geolocation.getCurrentPosition(geolocationSuccess,
+            document.write(navigator.geolocation.getCurrentPosition(geolocationSuccess,
                                          [geolocationError],
                                          [geolocationOptions]));
         </script>
