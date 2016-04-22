@@ -38,7 +38,7 @@
 		</config-file>
 
         <config-file target="res/values/strings.xml" parent="/resources">
-            <string name="google_app_id">$SENDER_ID</string>
+            <string name="google_app_id">AIzaSyC03xQ1qlbhwIcJYWc1xGc91NVwXhJLRa0</string>
         </config-file>
 
 		<config-file target="AndroidManifest.xml" parent="/manifest">
@@ -114,7 +114,7 @@
         </config-file>
 
         <config-file target="*-Info.plist" parent="GCM_SENDER_ID">
-            <string>$SENDER_ID</string>
+            <string>AIzaSyC03xQ1qlbhwIcJYWc1xGc91NVwXhJLRa0</string>
         </config-file>
 
         <config-file target="*-Info.plist" parent="IS_GCM_ENABLED">
