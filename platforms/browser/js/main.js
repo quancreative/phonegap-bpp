@@ -9,10 +9,12 @@ window.onerror = function(message, url, lineNumber) {
     alert(("Error: "+message+" in "+url+" at line "+lineNumber));
 }
 
-var position = navigator.geolocation.getCurrentPosition(geolocationSuccess,
-    [geolocationError],
-    [geolocationOptions]);
-alert('it works');
+
+
+var position = navigator.geolocation.getCurrentPosition(function(position) {
+    alert('it works');
+});
+
 
 // $('body').prepend('Latitude: '          + position.coords.latitude          + '\n' +
 //   'Longitude: '         + position.coords.longitude         + '\n' +
