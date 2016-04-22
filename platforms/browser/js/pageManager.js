@@ -30,6 +30,9 @@ var pageManager = {
             $('.page').removeClass('active');
             $(href).addClass('active');
 
+            $('.nav a').removeClass('active');
+            $this.addClass('active');
+
             console.log(href);
         });
     }
