@@ -41,9 +41,10 @@
             app.initialize();
             
             $(document).ready(function() {
-                $('body').append(navigator.geolocation.getCurrentPosition(geolocationSuccess,
-                                         [geolocationError],
-                                         [geolocationOptions]));
+                // navigator.geolocation.getCurrentPosition(geolocationSuccess,
+                                         //[geolocationError],
+                                         //[geolocationOptions])
+                alert('Test');
             });
         </script>
     </body>
