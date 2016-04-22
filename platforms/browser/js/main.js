@@ -46,7 +46,7 @@ var main = {
 		// Display JS errors.
 		window.onerror = function(message, url, lineNumber) {
 		    alert(("Error: "+message+" in "+url+" at line "+lineNumber));
-		}
+		};
 
 
 
