@@ -48,16 +48,16 @@ var main = {
 		    alert(("Error: "+message+" in "+url+" at line "+lineNumber));
 		};
 
-        alert('no errors up until this point');
+        $('.console-log').append('<div>no errors up until this point</div>');
         if (navigator.geolocation) {
             var position = navigator.geolocation.getCurrentPosition(function(p) {
-                alert('it works');
+                $('.console-log').append('<div>it works</div>');
                 $('body').prepend('<div style="font-size: 5rem; color: red;">Latitude: ' + p.coords.latitude + '</div>\n');
             }, function() {
-                alert('error');
-            });
+                $('.console-log').append('<div>error</div>');
+            }, {timeout: 5000});
         } else {
-            alert("Your browser does not support Geolocation!");
+            $('.console-log').append("<div>Your browser does not support Geolocation!</div>");
         }
 
 
