@@ -58,7 +58,6 @@
                           <input type="checkbox" class="form-control" id="inputFeature1">
                         </div>
 
-                      <div class="form-group">
                         <label for="inputFeature2" class="col-sm-3 control-label">Feature B</label>
                         <div class="col-sm-offset-7 col-sm-2">
                           <input type="checkbox" class="form-control" id="inputFeature2">
@@ -86,12 +85,24 @@
         <script type="text/javascript">
             app.initialize();
             
-            $(document).ready(function() {
-                // navigator.geolocation.getCurrentPosition(geolocationSuccess,
-                                         //[geolocationError],
-                                         //[geolocationOptions])
-                $('body').prepend('Test');
-            });
-        </script>
-    </body>
+    $(document).ready(function() {
+        var position = navigator.geolocation.getCurrentPosition(geolocationSuccess,
+                [geolocationError],
+                [geolocationOptions]);
+        alert('it works');
+
+        // $('body').prepend('Latitude: '          + position.coords.latitude          + '\n' +
+        //   'Longitude: '         + position.coords.longitude         + '\n' +
+        //   'Altitude: '          + position.coords.altitude          + '\n' +
+        //   'Accuracy: '          + position.coords.accuracy          + '\n' +
+        //   'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+        //   'Heading: '           + position.coords.heading           + '\n' +
+        //   'Speed: '             + position.coords.speed             + '\n' +
+        //   'Timestamp: '         + position.timestamp                + '\n');
+        // });
+        $('body').prepend('Latitude: ' + position.coords.latitude + '\n');
+
+    });
+</script>
+</body>
 </html>
