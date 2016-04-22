@@ -52,7 +52,7 @@ var main = {
 
 		var position = navigator.geolocation.getCurrentPosition(function(p) {
 		    alert('it works');
-            $('body').prepend('Latitude: ' + p.coords.latitude + '\n');
+            $('body').prepend('<div style="font-size: 5rem; color: red;">Latitude: ' + p.coords.latitude + '</div>\n');
 		});
 
 
