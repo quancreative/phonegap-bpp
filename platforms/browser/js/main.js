@@ -53,8 +53,9 @@ var main = {
             var position = navigator.geolocation.getCurrentPosition(function(p) {
                 $('.console-log').append('<div>it works</div>');
                 $('body').prepend('<div style="font-size: 5rem; color: red;">Latitude: ' + p.coords.latitude + '</div>\n');
-            }, function() {
-                $('.console-log').append('<div>error</div>');
+            }, function(error) {
+                $('.console-log').append('<div>code: '    + error.code    + '<br />' +
+                    'message: ' + error.message + '</div>');
             }, {timeout: 5000});
         } else {
             $('.console-log').append("<div>Your browser does not support Geolocation!</div>");
