@@ -51,8 +51,16 @@ var main = {
         $('.console-log').append('<div>no errors up until this point</div>');
         if (navigator.geolocation) {
             var position = navigator.geolocation.getCurrentPosition(function(p) {
-                $('.console-log').append('<div>it works</div>');
-                $('body').prepend('<div style="font-size: 5rem; color: red;">Latitude: ' + p.coords.latitude + '</div>\n');
+            //$('.console-log').append('<div>it works</div>');
+            //$('body').prepend('<div style="font-size: 5rem; color: red;">Latitude: ' + p.coords.latitude + '</div>\n');
+            $('.console-log').prepend('Latitude: '          + position.coords.latitude          + '\n' +
+                'Longitude: '         + position.coords.longitude         + '\n' +
+                'Altitude: '          + position.coords.altitude          + '\n' +
+                'Accuracy: '          + position.coords.accuracy          + '\n' +
+                'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+                'Heading: '           + position.coords.heading           + '\n' +
+                'Speed: '             + position.coords.speed             + '\n' +
+                'Timestamp: '         + position.timestamp                + '\n');
             }, function(error) {
                 $('.console-log').append('<div>code: '    + error.code    + '<br />' +
                     'message: ' + error.message + '</div>');
@@ -60,17 +68,6 @@ var main = {
         } else {
             $('.console-log').append("<div>Your browser does not support Geolocation!</div>");
         }
-
-
-		// $('body').prepend('Latitude: '          + position.coords.latitude          + '\n' +
-		//   'Longitude: '         + position.coords.longitude         + '\n' +
-		//   'Altitude: '          + position.coords.altitude          + '\n' +
-		//   'Accuracy: '          + position.coords.accuracy          + '\n' +
-		//   'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-		//   'Heading: '           + position.coords.heading           + '\n' +
-		//   'Speed: '             + position.coords.speed             + '\n' +
-		//   'Timestamp: '         + position.timestamp                + '\n');
-		// });
 
 
     }
