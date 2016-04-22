@@ -1,83 +1,93 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="vendors/bootstrap/bootstrap-3.3.6-dist/css/bootstrap.css" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>GSA</title>
-    </head>
-    <body>
-        <div class="app">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+    <link rel="stylesheet" type="text/css" href="vendors/bootstrap/bootstrap-3.3.6-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>GSA</title>
+</head>
+<body>
+<div class="app">
 
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready BROWSER</p>
-            </div>
-            
-            <div class="container">
+    <div id="deviceready" class="blink">
+        <p class="event listening">Connecting to Device</p>
 
-                <ul class="nav nav-tabs">
-                  <li role="presentation" class="active"><a href="#page-settings">Settings</a></li>
-                  <li role="presentation"><a href="#page-log">Log</a></li>
-                </ul>
+        <p class="event received">Device is Ready BROWSER</p>
+    </div>
 
-                <div id='page-settings' class="page row active">
-                    <h1>Settings</h1>
-                    <form class="form-horizontal">
-                      <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-3 control-label">Distance</label>
-                        <div class="col-sm-9">
-                          <input type="text" class="form-control" id="distance" placeholder="2 Block">
-                        </div>
-                      </div>
+    <div class="container">
 
-                        <div class="col-sm-12"><h4>Features:</h4></div>
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#page-settings">Settings</a></li>
+            <li role="presentation"><a href="#page-log">Log</a></li>
+        </ul>
 
-                      <div class="form-group">
-                        <label for="inputFeature1" class="col-sm-3 control-label">Feature A</label>
-                        <div class="col-sm-offset-7 col-sm-2 ">
-                          <input type="checkbox" class="form-control" id="inputFeature1">
-                        </div>
+        <div id='page-settings' class="page row active">
+            <h1>Settings</h1>
 
-                        <label for="inputFeature2" class="col-sm-3 control-label">Feature B</label>
-                        <div class="col-sm-offset-7 col-sm-2">
-                          <input type="checkbox" class="form-control" id="inputFeature2">
-                        </div>
-                      </div>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-md-4 control-label">Distance</label>
 
-                      <div class="form-group">
-                        <div class="col-sm-3">
-                          <button type="submit" class="btn btn-default">Cancel</button>
-                        </div>
-
-                        <div class="col-sm-offset-2 col-sm-4">
-                          <button type="submit" class="btn btn-default">Save</button>
-                        </div>
-                      </div>
-
-                    </form>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="distance" placeholder="2 Block">
+                    </div>
                 </div>
 
-                <!-- page Log -->
-                <div id="page-log" class="page">
-                    <h1>Log</h1>
-                    <div class="console-log"></div>
+                <div class="col-sm-12"><h4>Features:</h4></div>
+
+                <div class="form-group">
+                    <label for="inputFeature1" class="col-sm-4 control-label">Feature A</label>
+
+                    <div class="col-sm-8 ">
+                        <input type="checkbox" class="form-control" id="inputFeature1">
+                    </div>
                 </div>
 
-            </div> <!-- /.container -->
+                <div class="form-group">
+                    <label for="inputFeature2" class="col-sm-4 control-label">Feature B</label>
+
+                    <div class="col-sm-8">
+                        <input type="checkbox" class="form-control" id="inputFeature2">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-4">
+                        <button type="submit" class="btn btn-default">Cancel</button>
+                    </div>
+
+                    <div class="col-sm-offset-2 col-sm-4">
+                        <button type="submit" class="btn btn-default">Save</button>
+                    </div>
+                </div>
+
+            </form>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
-        <script type="text/javascript" src="js/pageManager.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-            pageManager.initialize();
-            main.initialize();
-        </script>
+
+        <!-- page Log -->
+        <div id="page-log" class="page">
+            <h1>Log</h1>
+
+            <div class="console-log"></div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+</div>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="js/pageManager.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+    app.initialize();
+    pageManager.initialize();
+    main.initialize();
+</script>
 </body>
 </html>
