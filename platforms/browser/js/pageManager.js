@@ -4,7 +4,7 @@ var pageManager = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
-        this.receivedEvent();
+        // this.receivedEvent();
     },
     // Bind Event Listeners
     //
