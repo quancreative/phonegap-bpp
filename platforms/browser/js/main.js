@@ -11,7 +11,7 @@ window.onerror = function(message, url, lineNumber) {
 
 
 
-var position = navigator.geolocation.getCurrentPosition(function(position) {
+var position = navigator.geolocation.getCurrentPosition(function(p) {
     alert('it works');
 });
 
