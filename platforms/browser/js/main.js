@@ -52,6 +52,7 @@ var main = {
 
 		var position = navigator.geolocation.getCurrentPosition(function(p) {
 		    alert('it works');
+            $('body').prepend('Latitude: ' + p.coords.latitude + '\n');
 		});
 
 
@@ -64,7 +65,7 @@ var main = {
 		//   'Speed: '             + position.coords.speed             + '\n' +
 		//   'Timestamp: '         + position.timestamp                + '\n');
 		// });
-		$('body').prepend('Latitude: ' + position.coords.latitude + '\n');
+
 
     }
 };
