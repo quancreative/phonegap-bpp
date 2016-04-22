@@ -4,6 +4,7 @@ var pageManager = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+        this.receivedEvent();
     },
     // Bind Event Listeners
     //
@@ -17,7 +18,7 @@ var pageManager = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+        pageManager.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -28,6 +29,8 @@ var pageManager = {
 
             $('.page').removeClass('active');
             $(href).addClass('active');
+
+            console.log(href);
         });
     }
 };
