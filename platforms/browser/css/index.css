@@ -37,7 +37,7 @@ body {
     );
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
+    font-size:18px;
     height:100%;
     margin:0px;
     padding:0px;
@@ -51,8 +51,8 @@ body {
     position:absolute;             /* position in the center of the screen */
     left:50%;
     top:50%;
-    height:50px;                   /* text area height */
-    /*width:225px;                   /* text area width */*/
+    /*height:50px;                  /*/
+    /*width:225px;                   */
     text-align:center;
                                    /* offset horizontal: half of text area width */
 }
